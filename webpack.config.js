@@ -6,6 +6,7 @@ const { name } = require('file-loader');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPLugin = require('terser-webpack-plugin');
 const DotEnv = require('dotenv-webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     entry: './src/index.js',
@@ -70,7 +71,7 @@ module.exports = {
                 }
             ]
         }),
-        new DotEnv()
+        new DotEnv(),
     ],
     optimization:{
         minimize: true,
