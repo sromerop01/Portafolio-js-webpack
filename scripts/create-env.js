@@ -1,3 +1,3 @@
 const fs = require('fs');
 
-fs.writeFileSync('./.env',`API=${process.nextTick.API}\n`);
+fs.writeFileSync('./.env',`API=${process.env.API}\n`);
